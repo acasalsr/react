@@ -13,6 +13,19 @@
   }
 }
 
+.boxWrapper {
+  border: solid 5px crimson;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.firstGrid {
+  background-color: antiquewhite;
+}
+.secondGrid {
+  background-color: blueviolet;
+}
 .App-header {
   background-color: #272447;
   min-height: 100vh;

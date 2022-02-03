@@ -1,14 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import HelloWorld from "./HelloWorld";
+import GridSection from "./GridSection";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
-    <HelloWorld />
+    <GridSection />
   </React.StrictMode>,
   document.getElementById("root")
 );
