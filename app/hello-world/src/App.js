@@ -16,7 +16,7 @@ export default function App() {
           <img src={logo} className="App-logo" alt="logo" />
           <Hello name={nomVariable} />
           <Box>
-            <p>this is my first line of code.</p>
+            <p>this is my first line of code...</p>
             <a
               className="App-link"
               href="https://reactjs.org"
