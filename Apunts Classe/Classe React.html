@@ -49,4 +49,22 @@ es pot posar qualsevol cosa dins que poguem fer un return:
 floc-style.top = "30%";
 
 attributes
+
+
+07/02/2022
+
+En un component no podem posar:
+export default NomVariable (){
+    <h1>nom h1</h1>;
+    <h2>nom h2</h2>
+}
+Aixó està malament.
+S'ha de fer servir <> </>
+
+export default NomVariable (){
+    <>
+        <h1>nom h1</h1>;
+        <h2>nom h2</h2>
+    </>
+}
 -->
