@@ -1,6 +1,5 @@
 import "./App.css";
-import Salutacio from "./Salutacio";
-import Temps from "./Temps";
+import PersonaEstacio from "./PersonaEstacio";
 
 let nenet = "Nenet";
 let barcelona = {
@@ -14,15 +13,6 @@ let londres = {
   fa: "pluja",
   temperatura: 4,
 };
-
-function PersonaEstacio({ nom, estacion }) {
-  return (
-    <>
-      <Salutacio nom={nom} />
-      <Temps estacion={estacion} />
-    </>
-  );
-}
 
 export default function App() {
   return (
