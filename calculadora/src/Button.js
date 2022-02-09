@@ -1,3 +1,11 @@
-export default function Button({ num }) {
-  return <h3 className="number">{num}</h3>;
+/*
+Crear condició per valorar si el usuari afegeix a l'array numCalcul un número, suma o resta.
+*/
+
+export default function Button({ num, funcioOperacio }) {
+  return (
+    <button onClick={() => funcioOperacio(num)} className="number">
+      {num}
+    </button>
+  );
 }
