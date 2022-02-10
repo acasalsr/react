@@ -3,7 +3,7 @@ import UserInfo from "./UserInfo";
 export default function Comment({ author, text, date }) {
   return (
     <div className="Comment">
-      <UserInfo author={author} />
+      <UserInfo user={author} />
       <div className="Comment-text">{text}</div>
       <div className="Comment-date">{formatDate(date)}</div>
     </div>

@@ -1,10 +1,10 @@
 import Avatar from "./Avatar.1";
 
-export default function UserInfo({ author }) {
+export default function UserInfo({ user }) {
   return (
     <div className="UserInfo">
-      <Avatar author={author} />
-      <div className="UserInfo-name">{author.name}</div>
+      <Avatar user={user} />
+      <div className="UserInfo-name">{user.name}</div>
     </div>
   );
 }

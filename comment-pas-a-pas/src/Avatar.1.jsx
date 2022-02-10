@@ -1,3 +1,3 @@
-export default function Avatar({ author }) {
-  return <img className="Avatar" src={author.avatarUrl} alt={author.name} />;
+export default function Avatar({ user }) {
+  return <img className="Avatar" src={user.avatarUrl} alt={user.name} />;
 }
