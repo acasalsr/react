@@ -9,11 +9,18 @@ let images = [
 ];
 
 function App() {
+  const [screen, setScreen] = useState("");
   return (
     <>
       {images.map((img) => (
         <div>
-          <img src={img} onClick={"falta accio"} width="400px" height="100%" />
+          <img
+            className={screen === img && "gran"}
+            onClick={() => setScreen(img)}
+            src={img}
+            width="400px"
+            height="100%"
+          />
         </div>
       ))}
     </>
