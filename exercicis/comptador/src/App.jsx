@@ -16,7 +16,7 @@ export default function App() {
       : setDisplayNumero((n) => n - 1);
 
   const sumaCinc = () =>
-    displayNumero >= 10
+    displayNumero >= 6
       ? alert("No es pot fer aquesta operacio")
       : setDisplayNumero((n) => n + 5);
 
