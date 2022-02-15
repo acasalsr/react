@@ -1,34 +1,57 @@
 import "./App.css";
+import { useState } from "react";
 
 export default function App() {
+  const [display, setDisplay] = useState("displayNone");
+  const [llibre, setLlibre] = useState(null);
+
+  /*
+    si el {contingutLlibre} te la classe "displayNone". onClick a <h1>, setDisplay és igual a "". 
+  */
+  /*
+ setDisplay(Llibre Actual "contingutLlibre") -> 
+ */
+  const swapClasses = (contingutLLibre) => {
+    setLlibre(contingutLLibre);
+    display === "displayNone" ? setDisplay("") : setDisplay("displayNone");
+  };
+
   const contingut = [
     {
-      title: "Titul",
+      title: "Titul1",
       content:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis fugiat, ab aliquid esse eos nam, reprehenderit eum qui quisquam assumenda, quidem error dolorum earum. Commodi cum odio atque velit consectetur! Dicta, assumenda consequatur repellendus ex eligendi magni provident et dignissimos? Quos, quam. Placeat a voluptatem dicta eius voluptate consequuntur. Iusto ab natus pariatur iure dignissimos nesciunt laboriosam nisi ratione reiciendis?",
+        "1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis fugiat, ab aliquid esse eos nam, reprehenderit eum qui quisquam assumenda, quidem error dolorum earum. Commodi cum odio atque velit consectetur! Dicta, assumenda consequatur repellendus ex eligendi magni provident et dignissimos? Quos, quam. Placeat a voluptatem dicta eius voluptate consequuntur. Iusto ab natus pariatur iure dignissimos nesciunt laboriosam nisi ratione reiciendis?",
     },
     {
-      title: "Titul",
+      title: "Titul2",
       content:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis fugiat, ab aliquid esse eos nam, reprehenderit eum qui quisquam assumenda, quidem error dolorum earum. Commodi cum odio atque velit consectetur! Dicta, assumenda consequatur repellendus ex eligendi magni provident et dignissimos? Quos, quam. Placeat a voluptatem dicta eius voluptate consequuntur. Iusto ab natus pariatur iure dignissimos nesciunt laboriosam nisi ratione reiciendis?",
+        "2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis fugiat, ab aliquid esse eos nam, reprehenderit eum qui quisquam assumenda, quidem error dolorum earum. Commodi cum odio atque velit consectetur! Dicta, assumenda consequatur repellendus ex eligendi magni provident et dignissimos? Quos, quam. Placeat a voluptatem dicta eius voluptate consequuntur. Iusto ab natus pariatur iure dignissimos nesciunt laboriosam nisi ratione reiciendis?",
     },
     {
-      title: "Titul",
+      title: "Titul3",
       content:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis fugiat, ab aliquid esse eos nam, reprehenderit eum qui quisquam assumenda, quidem error dolorum earum. Commodi cum odio atque velit consectetur! Dicta, assumenda consequatur repellendus ex eligendi magni provident et dignissimos? Quos, quam. Placeat a voluptatem dicta eius voluptate consequuntur. Iusto ab natus pariatur iure dignissimos nesciunt laboriosam nisi ratione reiciendis?",
+        "3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis fugiat, ab aliquid esse eos nam, reprehenderit eum qui quisquam assumenda, quidem error dolorum earum. Commodi cum odio atque velit consectetur! Dicta, assumenda consequatur repellendus ex eligendi magni provident et dignissimos? Quos, quam. Placeat a voluptatem dicta eius voluptate consequuntur. Iusto ab natus pariatur iure dignissimos nesciunt laboriosam nisi ratione reiciendis?",
     },
     {
-      title: "Titul",
+      title: "Titul4",
       content:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis fugiat, ab aliquid esse eos nam, reprehenderit eum qui quisquam assumenda, quidem error dolorum earum. Commodi cum odio atque velit consectetur! Dicta, assumenda consequatur repellendus ex eligendi magni provident et dignissimos? Quos, quam. Placeat a voluptatem dicta eius voluptate consequuntur. Iusto ab natus pariatur iure dignissimos nesciunt laboriosam nisi ratione reiciendis?",
+        "4 Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis fugiat, ab aliquid esse eos nam, reprehenderit eum qui quisquam assumenda, quidem error dolorum earum. Commodi cum odio atque velit consectetur! Dicta, assumenda consequatur repellendus ex eligendi magni provident et dignissimos? Quos, quam. Placeat a voluptatem dicta eius voluptate consequuntur. Iusto ab natus pariatur iure dignissimos nesciunt laboriosam nisi ratione reiciendis?",
     },
   ];
   return (
     <>
       {contingut.map((contingutLlibre) => (
         <div className="wrapper">
-          <h1>{contingutLlibre.title}</h1>
-          <p className="hiddenContent">{contingutLlibre.content}</p>
+          <h1 onClick={() => swapClasses(contingutLlibre.title)}>
+            {contingutLlibre.title}
+          </h1>
+          <p
+            className={
+              contingutLlibre.title === llibre ? display : "displayNone"
+            }
+          >
+            {contingutLlibre.content}
+          </p>
         </div>
       ))}
     </>
