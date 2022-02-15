@@ -8,23 +8,33 @@ let images = [
   "https://www.honda.es/content/dam/central/motorcycles/supersports/cbr650r_2022/Top-XL-Tile-Module/CBR650R-3-quarter-front-right-side-smartphone.jpg/jcr:content/renditions/m_r.jpg",
 ];
 
-function App() {
-  const [screen, setScreen] = useState("");
+export default function App() {
+  const [fotoEmagatzemada, setFotoEmagatzemada] = useState("");
+  const [imgClass, setImgClass] = useState("");
+
+  const swapClass = (imgActual) => {
+    setFotoEmagatzemada(imgActual);
+    if (imgClass === "") {
+      setImgClass("gran");
+    } else {
+      setImgClass("");
+    }
+  };
+
   return (
     <>
-      {images.map((img) => (
+      {images.map((imgActual) => (
         <div>
           <img
-            className={screen === img && "gran"}
-            onClick={() => setScreen(img)}
-            src={img}
+            onClick={() => swapClass(imgActual)}
+            className={fotoEmagatzemada === imgActual ? imgClass : ""}
+            src={imgActual}
             width="400px"
             height="100%"
+            alt="moto"
           />
         </div>
       ))}
     </>
   );
 }
-
-export default App;
