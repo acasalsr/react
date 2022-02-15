@@ -3,12 +3,10 @@ import { useState } from "react";
 
 export default function App() {
   const [displayNumero, setDisplayNumero] = useState(0);
-  //const increment = () => setDisplayNumero((n) => n + 1);
+  const increment = () => setDisplayNumero((n) => n + 1);
 
   const sumaUn = () =>
-    displayNumero >= 10
-      ? alert("No pot ser més gran a 10")
-      : setDisplayNumero((n) => n + 1); //Com crridar una funció {increment}
+    displayNumero >= 10 ? alert("No pot ser més gran a 10") : increment(); //setDisplayNumero((n) => n + 1); //Com crridar una funció {increment}
 
   const restaUn = () =>
     displayNumero <= 0
