@@ -3,12 +3,12 @@ import "./App.css";
 
 export default function App() {
   const [paginacio, setPaginacio] = useState(1);
-  const oneMore = (ultimValor) =>
-    paginacio >= ultimValor ? setPaginacio(1) : setPaginacio((n) => n + 1);
 
-  let oneLess = (ultimValorLess) => {
+  const oneLess = (ultimValorLess) => {
     paginacio <= 1 ? setPaginacio(ultimValorLess) : setPaginacio((n) => n - 1);
   };
+  const oneMore = (ultimValor) =>
+    paginacio >= ultimValor ? setPaginacio(1) : setPaginacio((n) => n + 1);
 
   let images = [
     {
@@ -37,7 +37,7 @@ export default function App() {
       {images.map((imatgeSurf) => (
         <div className="imageWrapper">
           {imatgeSurf.index === paginacio && (
-            <img src={imatgeSurf.url} width="400px" height="100%" alt="surf" />
+            <img src={imatgeSurf.url} width="auto" height="400px" alt="surf" />
           )}
         </div>
       ))}
@@ -45,7 +45,9 @@ export default function App() {
         left
       </button>
       {images.map((numeroImatge) => (
-        <button>{numeroImatge.index}</button>
+        <button onClick={() => setPaginacio(numeroImatge.index)}>
+          {numeroImatge.index}
+        </button>
       ))}
       <button onClick={() => oneMore(images.length)} className="buttonRight">
         right
