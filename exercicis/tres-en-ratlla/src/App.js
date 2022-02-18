@@ -30,7 +30,7 @@ valorX.push[indexArrayMap +1]
       setPulsar((n) => n + 1);
       arr[indexArrayMap] = "X";
       setArr([...arr]);
-      valorX.push[indexArrayMap];
+      //valorX.push[indexArrayMap];
     } else {
       setPulsar((n) => n + 1);
       arr[indexArrayMap] = "O";
