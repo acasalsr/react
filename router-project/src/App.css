@@ -33,5 +33,27 @@ header {
 main,
 nav,
 aside {
-  border:solid black 1px;
+  padding: 1rem;
+}
+
+footer {
+  background-color: rgb(203, 203, 203);
+  line-height: 5rem;
+  padding: 0 2rem;
+}
+
+.displayNone {
+  /*visibility: hidden;*/
+  display: none;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
 }
