@@ -2,41 +2,37 @@ import "./App.css";
 import { useState } from "react";
 
 export default function App() {
-  /* 
-Route Map.
-X -> 1. Fer un contador -> servirà per comprovar SI el click % === 0
-X -> 2. Crear un index per saber on el usuari ha clicat. 
-X -> 3. onClick -> guardar el valor del lloc clicat i assigar aquest al "setElement" 
+  const winnerArrays = [[0, 1, 2],[3, 4, 5],[6, 7, 8],[0, 4, 8],[2, 4, 6],[0, 3, 6],[2, 5, 8]];
 
-Convinacions: 
-Si la suma dels tres valors es divisible i el resultat és 3 o 4 ha guanyat.
-array -> ultima posicio X o O i anar restant.
-
-let valorX = []
-let valorO = []
-
-valorX.push[indexArrayMap +1]
-
-*/
   const game = ["", "", "", "", "", "", "", "", ""];
-  let valorX = [];
-  let valorO = [];
-
   const [pulsar, setPulsar] = useState(0);
   const [arr, setArr] = useState(game);
+  const [arrX, setArrX] = useState([]);
+  const [arrO, setArrO] = useState([]);
 
   let clickContainer = (indexArrayMap) => {
     if (pulsar % 2 === 0) {
       setPulsar((n) => n + 1);
       arr[indexArrayMap] = "X";
       setArr([...arr]);
-      //valorX.push[indexArrayMap];
+      setArrX([...arr]);
     } else {
       setPulsar((n) => n + 1);
       arr[indexArrayMap] = "O";
       setArr([...arr]);
+      setArrO([...arr]);
     }
   };
+
+
+  winnerArrays.find((combinacioGuanyadora) => {
+    const [a, b, c] = combinacioGuanyadora;
+    const esGuanyador = arr[a] !== '' && arr[a] === arr[b] && arr[b] === arr[c];
+  });
+
+  
+  };
+
   return (
     <>
       <div className="wrapper-tres-en-ratlla">
@@ -48,6 +44,7 @@ valorX.push[indexArrayMap +1]
             {xo_}
           </div>
         ))}
+        {checkResult}
       </div>
     </>
   );
