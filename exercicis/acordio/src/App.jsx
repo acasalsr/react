@@ -5,6 +5,7 @@ export default function App() {
   const [display, setDisplay] = useState("displayNone");
   const [llibre, setLlibre] = useState(null);
 
+
   /*
     si el {contingutLlibre} te la classe "displayNone". onClick a <h1>, setDisplay és igual a "". 
   */
