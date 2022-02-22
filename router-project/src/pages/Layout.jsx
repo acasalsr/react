@@ -24,7 +24,10 @@ export default function Layout() {
               <Link to="/carrusel">Carrusel</Link>
             </li>
             <li>
-              <Link to="/graellaFotos">Graella fotos</Link>
+              <Link to="/graella-fotos">Graella fotos</Link>
+            </li>
+            <li>
+              <Link to="/tres-en-ratlla">Tres en Ratlla</Link>
             </li>
           </ul>
         </nav>

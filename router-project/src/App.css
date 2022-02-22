@@ -57,3 +57,30 @@ footer {
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
+.gran {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: auto;
+}
+
+.wrapper-tres-en-ratlla {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  row-gap: 4px;
+  column-gap: 4px;
+  background-color: grey;
+  height: 400px;
+  width: 400px;
+  padding: 4px;
+}
+.container_tres-en-ratlla {
+  display: grid;
+  font-size: 2rem;
+  background-color: white;
+  align-items: center;
+  justify-content: center;
+}

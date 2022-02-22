@@ -7,6 +7,7 @@ import Comptador from "./pages/Comptador";
 import Acordeo from "./pages/Acordeo";
 import Carrusel from "./pages/Carrusel";
 import GraellaFotos from "./pages/GraellaFotos";
+import TresEnRatlla from "./pages/TresEnRatlla";
 
 export default function App() {
   return (
@@ -17,7 +18,8 @@ export default function App() {
           <Route path="comptador" element={<Comptador />} />
           <Route path="acordeo" element={<Acordeo />} />
           <Route path="carrusel" element={<Carrusel />} />
-          <Route path="graellaFotos" element={<GraellaFotos />} />
+          <Route path="graella-fotos" element={<GraellaFotos />} />
+          <Route path="tres-en-ratlla" element={<TresEnRatlla />} />
         </Route>
       </Routes>
     </BrowserRouter>
